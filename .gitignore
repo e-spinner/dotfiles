@@ -1,0 +1,14 @@
+/*
+
+!hypr/
+!hypr/*
+
+!kitty/
+!kitty/*
+
+!zsh/
+!zsh/*
+zsh/.zcomp*
+
+!.gitignore
+!KEYBINDS.txt

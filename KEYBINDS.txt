@@ -1,0 +1,32 @@
+# -------------------------- #
+# --- HYPRLAND SHORTCUTS --- #
+# -------------------------- #
+
+# -- applications -- # 
+mod && Q :: terminal
+mod && W :: browser
+mod && E :: editor
+++ ALT   :: open in new workspace
+++ CTRL  :: replce activewindow
+
+# -- management -- #
+mod && Escape :: kill active Window
+++ CTRL       :: kill Hyprland
+
+mod && LMB   :: move Window
+mod && RMB   :: resize Window
+mod && V     :: float Window
+mod && Space :: cylce workspace
+
+# ----------------------- #
+# --- KiTTY SHORTCUTS --- #
+# ----------------------- #
+
+CTRL && SHIFT && T    :: new tab
+CTRL && SHIFT && Q    :: kill tab
+CTRL && SHIFT && Left :: cycle tab
+CTRL && SHIFT && L    :: cycle tab layout
+
+CTRL && SHIFT && ENTER :: new window
+CTRL && SHIFT && W     :: kill window 
+CTRL && SHIFT && ]     :: cycle window 
