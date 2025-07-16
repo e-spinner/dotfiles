@@ -12,3 +12,6 @@ zsh/.zcomp*
 
 !.gitignore
 !KEYBINDS.txt
+
+!font/
+!font/*
