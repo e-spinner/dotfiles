@@ -1,0 +1,181 @@
+{
+	"layer": "top",
+	"position": "TOP",
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"custom/right-arrow-dark",
+		"custom/spacer-light",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock#2",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"clock#3",
+		"custom/right-arrow-dark"
+	],
+	"modules-right": [
+        "group/hardware",
+
+		"custom/left-arrow-dark",
+		"pulseaudio",
+		"battery",
+		"backlight",
+		"bluetooth",
+		"network",
+		"custom/spacer-dark",
+        "custom/power",
+		"custom/spacer-dark"
+	],
+
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules": ["disk", "cpu", "memory"]
+	},
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/spacer-dark": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-light": {
+		"format": " ",
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"active-only": false,
+		"persistent-only": true,
+		"all-outputs": true,
+		"format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": "",
+            "urgent": ""
+        },
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+		"persistent-workspaces": {
+            "*": 5
+        }
+    }, 
+
+	"hyprland/window": {
+		"format": "{}",
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "$1",
+			"(.*) - fish": "> [$1]",
+			"(.*) - Code - OSS": "$1"
+		},
+		"separate-outputs": true,
+		"icon": true,
+		"icon-size": 12
+	},
+
+	"clock#1": {
+		"format": "{:%a}",
+		"tooltip": false
+	},
+	"clock#2": {
+		"format": "{:%I:%M:%S}",
+		"tooltip": false,
+    "interval": 1
+	},
+	"clock#3": {
+		"format": "{:%m-%d}",
+		"tooltip": false
+	},
+
+	"disk": {
+		"interval": 30,
+		"format": "D {percentage_used}% ",
+		"path": "/"
+	},
+	"cpu": {
+		"format": "/ C {usage}% "
+	},
+	"memory": {
+		"format": "/ M {}% "
+	},
+
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-muted": "󰝟",
+		"format-icons": ["󰕿", "󰖀", "󰕾"],
+		"tooltip-format": "{volume:2}%",
+		"scroll-step": 5,
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5"
+	},
+
+	"battery": {
+        "format": "{icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"interval": 60,
+		"tooltip-format": "{capacity}%"
+    },
+
+	"backlight": {
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format": "{icon}",
+		"on-scroll-up": "~/.config/waybar/brightnessctl.sh up",
+  	    "on-scroll-down": "~/.config/waybar/brightnessctl.sh down",
+		"tooltip": false
+    },
+
+	"network": {
+		"interval": 1,
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰤭",
+		"tooltip-format": "{essid}",
+		"format-icons": [
+			"󰤯",  
+			"󰤟",  
+			"󰤢",  
+			"󰤥",  
+			"󰤨"   
+		],
+        "on-click": "networkmanager_dmenu"
+	},
+
+	"bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "",
+		"on-click": "DMENU_BLUETOOTH_LAUNCHER=rofi dmenu-bluetooth -theme waybar.rasi",
+		"tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+	},
+
+	"custom/power": {
+		"format": "󰐥", 
+		"tooltip": false,
+		"on-click": "~/.config/rofi/power-menu.sh"
+	}
+
+}

@@ -6,9 +6,20 @@
 !kitty/
 !kitty/*
 
+!networkmanager-dmenu
+!networkmanager-dmenu/*
+
+!rofi
+!rofi/*
+
 !zsh/
 !zsh/*
 zsh/.zcomp*
 
 !.gitignore
 !KEYBINDS.txt
+
+!waybar
+!waybar/*
+
+!pavucontrol.ini
