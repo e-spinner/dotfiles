@@ -26,3 +26,5 @@ zsh/.zcomp*
 !waybar/*
 
 !pavucontrol.ini
+
+!install.sh
