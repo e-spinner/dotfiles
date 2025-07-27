@@ -8,27 +8,18 @@
 		"custom/spacer-light",
 		"hyprland/window"
 	],
-	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
-		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
-		"clock#3",
-		"custom/right-arrow-dark"
-	],
+
 	"modules-right": [
         "group/hardware",
 
 		"custom/left-arrow-dark",
 		"pulseaudio",
-		"battery",
 		"backlight",
 		"bluetooth",
 		"network",
 		"custom/spacer-dark",
+		"battery",
+		"clock#2",
         "custom/power",
 		"custom/spacer-dark"
 	],
@@ -91,7 +82,8 @@
 		},
 		"separate-outputs": true,
 		"icon": true,
-		"icon-size": 12
+		"icon-size": 12,
+		"expand": true
 	},
 
 	"clock#1": {
