@@ -124,12 +124,12 @@
 		"format": "{icon}",
 		"format-muted": "󰝟",
 		"format-icons": ["󰕿", "󰖀", "󰕾"],
-		"tooltip-format": "{volume:2}%",
+		"tooltip": false,
 		"scroll-step": 5,
-		"on-click": "pamixer -t",
+		"on-click": "~/.config/waybar/volumectl.sh mute",
 		"on-click-right": "pavucontrol",
-		"on-scroll-up": "pamixer -i 5",
-		"on-scroll-down": "pamixer -d 5"
+		"on-scroll-up": "~/.config/waybar/volumectl.sh up",
+		"on-scroll-down": "~/.config/waybar/volumectl.sh down"
 	},
 
 	"battery": {
