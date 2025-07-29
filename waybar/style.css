@@ -63,6 +63,7 @@ window#waybar {
 #network,
 #bluetooth,
 #custom-power,
+#custom-taskbar,
 #custom-spacer-dark,
 #backlight,
 #battery {
@@ -93,3 +94,29 @@ window#waybar {
 	font-size: 8px;
 	color: @green;
 }
+
+.custom-spotify {
+    padding: 0 10px;
+    margin: 0 4px;
+    color: @green;
+}
+
+/* #backlight {
+    color: @yellow;
+}
+
+#custom-power {
+    color: @red;
+}
+
+#bluetooth {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @mauve;
+}
+
+#network {
+    color: @peach;
+} */

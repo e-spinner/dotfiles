@@ -3,13 +3,26 @@
 	"position": "TOP",
 
 	"modules-left": [
+		// "custom/spacer-dark",
+		// "custom/taskbar",
 		"hyprland/workspaces",
 		"custom/right-arrow-dark",
 		"custom/spacer-light",
 		"hyprland/window"
 	],
-
+	"modules-center": [
+		"custom/left-arrow-dark",
+		"clock#1",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"clock#2",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+		"clock#3",
+		"custom/right-arrow-dark"
+	],
 	"modules-right": [
+		"custom/spotify",
         "group/hardware",
 
 		"custom/left-arrow-dark",
@@ -17,12 +30,18 @@
 		"backlight",
 		"bluetooth",
 		"network",
-		"custom/spacer-dark",
 		"battery",
-		"clock#2",
-        "custom/power",
-		"custom/spacer-dark"
+        "custom/power"
 	],
+
+	"custom/spotify": {
+		"exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+		"format": "{}",
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous"
+	},
 
 	"group/hardware": {
 		"orientation": "horizontal",
@@ -78,11 +97,12 @@
 		"rewrite": {
 			"(.*) — Mozilla Firefox": "$1",
 			"(.*) - fish": "> [$1]",
-			"(.*) - Code - OSS": "$1"
+			"(.*) - Code - OSS": "$1",
+			"^([^:]+):.*$": "$1"
 		},
 		"separate-outputs": true,
 		"icon": true,
-		"icon-size": 12,
+		"icon-size": 10,
 		"expand": true
 	},
 
@@ -113,7 +133,7 @@
 	},
 
 	"pulseaudio": {
-		"format": "{icon}",
+		"format": " {icon}",
 		"format-muted": "󰝟",
 		"format-icons": ["󰕿", "󰖀", "󰕾"],
 		"tooltip": false,
@@ -125,7 +145,7 @@
 	},
 
 	"battery": {
-        "format": "{icon}",
+        "format": " {icon}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 		"interval": 60,
 		"tooltip-format": "{capacity}%"
@@ -133,7 +153,7 @@
 
 	"backlight": {
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "format": "{icon}",
+        "format": " {icon}",
 		"on-scroll-up": "~/.config/waybar/brightnessctl.sh up",
   	    "on-scroll-down": "~/.config/waybar/brightnessctl.sh down",
 		"tooltip": false
@@ -141,7 +161,7 @@
 
 	"network": {
 		"interval": 1,
-		"format-wifi": "{icon}",
+		"format-wifi": " {icon}",
 		"format-ethernet": "󰈀",
 		"format-disconnected": "󰤭",
 		"tooltip-format": "{essid}",
@@ -156,8 +176,9 @@
 	},
 
 	"bluetooth": {
-        "format-on": "󰂯",
-        "format-off": "󰂲",
+        "format-on": " 󰂯",
+        "format-off": " 󰂲 ",
+		"format-connected": " 󰂯",
         "format-disabled": "",
 		"on-click": "DMENU_BLUETOOTH_LAUNCHER=rofi dmenu-bluetooth -theme waybar.rasi",
 		"tooltip-format-connected": "{device_enumerate}",
@@ -165,9 +186,15 @@
 	},
 
 	"custom/power": {
-		"format": "󰐥", 
+		"format": " 󰐥 ", 
 		"tooltip": false,
 		"on-click": "~/.config/rofi/power-menu.sh"
-	}
+	},
+
+	// "custom/taskbar": {
+	// 	"format": "󱗼 ",
+	// 	"tooltip": false,
+	// 	"on-click": "~/.config/rofi/task-bar.sh"
+	// }
 
 }

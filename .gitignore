@@ -22,6 +22,9 @@ zsh/.zcomp*
 !.gitignore
 !KEYBINDS.txt
 
+!fastfetch/
+!fastfetch/*
+
 !font/
 !font/*
 
