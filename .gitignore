@@ -15,6 +15,9 @@
 !rofi
 !rofi/*
 
+!todo
+!todo/*
+
 !zsh/
 !zsh/*
 zsh/.zcomp*

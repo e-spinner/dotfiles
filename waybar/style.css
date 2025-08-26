@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-	font-size: 12px;
+	font-size: 16px;
 	font-family: "JetBrainsMono Nerd Font", monospace;
 }
 
@@ -73,7 +73,7 @@ window#waybar {
 #clock,
 #battery {
 	padding: 0 5px;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 #backlight,

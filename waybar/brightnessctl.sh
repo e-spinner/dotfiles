@@ -12,12 +12,12 @@ value=$(brightnessctl get)
 case $1 in
     up)
     brightnessctl set +5%
-    send_notification $value
+    # send_notification $value
     ;;
     down)
     if (( value >= 9600 )); then
         brightnessctl set 5%-
-        send_notification $value
+        # send_notification $value
     fi
     ;;
 esac

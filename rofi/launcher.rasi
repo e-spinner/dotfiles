@@ -13,7 +13,7 @@ configuration {
 }
 
 * {
-  font: "JetBrainsMono Nerd Font 12";
+  font: "JetBrainsMono Nerd Font 15";
   background: #1e1e2e;
   foreground: #cdd6f4;
   border: 0;
@@ -22,8 +22,8 @@ configuration {
 }
 
 window {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   location: center;
   anchor: center;
   border-radius: 0px;

@@ -6,66 +6,76 @@
         "padding": {
             "top": 0,
             "left": 0
+        },
+        "color": {
+            "1": "green"
         }
     },
     "modules": [
-        "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌────────────────────────────────────────────┐"
+            "key": " ",
+            "format": ""
         },
         {
-            "type": "host",
-            "key": " PC",
-            "keyColor": "green"
+            "type": "custom",
+            "key": " ",
+            "format": ""
         },
         {
-            "type": "title",
-            "key": "└ └",
-            "keyColor": "green"
-        },
-        "break",
-        {
-            "type": "os",
-            "key": "󰣇 OS",
-            "keyColor": "yellow"
+            "type": "custom",
+            "key": " ",
+            "format": ""
         },
         {
-            "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "yellow"
+            "type": "custom",
+            "key": " ",
+            "format": "Todo:"
         },
         {
-            "type": "bios",
-            "key": "└ └",
-            "keyColor": "yellow"
+            "type": "custom",
+            "key": " ",
+            "format": ""
         },
-        "break",
         {
             "type": "command",
-            "key": "  OS Age ",
-            "keyColor": "magenta",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 1"
         },
         {
-            "type": "uptime",
-            "key": "  Uptime ",
-            "keyColor": "magenta"
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 2"
         },
         {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────┘"
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 3"
         },
-
-//        {
-//            "type": "colors"
-//        },
-
         {
-            "type": "colors",
-            "paddingLeft": 2,
-            "symbol": "circle"
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 4"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 5"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 6"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 7"
+        },
+        {
+            "type": "command",
+            "key": " ",
+            "text": "/home/dev/.config/todo/todo.sh next 8"
         }
- 
     ]
 }

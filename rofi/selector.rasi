@@ -1,11 +1,11 @@
 @theme "catppuccin-default" 
 
 * { 
-  font: "monospace 10"; 
+  font: "monospace 14"; 
 }
 
 window { 
-  width: 70px; 
+  width: 120px; 
   location: northeast;
   anchor:   northeast;
   x-offset: -2px;

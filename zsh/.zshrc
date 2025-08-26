@@ -1,3 +1,8 @@
+
+alias todo=/home/dev/.config/todo/todo.sh
+
+todo reorder
+
 fastfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -41,7 +46,11 @@ export PATH="$HOME/.spicetify:$PATH"
 
 # --- ALIAS' --- #
 alias colortest=~/.config/hypr/scripts/colortest.sh
+alias c=clear
+alias todo=/home/dev/.config/todo/todo.sh
 
 
 source /home/dev/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+. "$HOME/.local/bin/env"
