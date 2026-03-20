@@ -1,9 +1,4 @@
-
-alias todo=/home/dev/.config/todo/todo.sh
-
-todo reorder
-
-fastfetch
+# fastfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -42,15 +37,28 @@ source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_TITLE="true"
 
 export PATH="$HOME/.spicetify:$PATH"
-
+export "MICRO_TRUECOLOR=1"
 
 # --- ALIAS' --- #
 alias colortest=~/.config/hypr/scripts/colortest.sh
 alias c=clear
 alias todo=/home/dev/.config/todo/todo.sh
-
+alias cf='clear && todo reorder && fastfetch'
+alias td='todo done'
+alias cs='cowsay'
+alias linoffice='/home/dev/.local/bin/linoffice/linoffice.sh'
+alias off='poweroff'
 
 source /home/dev/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 . "$HOME/.local/bin/env"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/dev/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

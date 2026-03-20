@@ -90,7 +90,7 @@
 		"persistent-workspaces": {
             "*": 5
         }
-    }, 
+    },
 
 	"hyprland/window": {
 		"format": "{}",
@@ -162,15 +162,15 @@
 	"network": {
 		"interval": 1,
 		"format-wifi": " {icon}",
-		"format-ethernet": "󰈀",
+		"format-ethernet": " 󰈀",
 		"format-disconnected": "󰤭",
 		"tooltip-format": "{essid}",
 		"format-icons": [
-			"󰤯",  
-			"󰤟",  
-			"󰤢",  
-			"󰤥",  
-			"󰤨"   
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
 		],
         "on-click": "networkmanager_dmenu"
 	},
@@ -186,7 +186,7 @@
 	},
 
 	"custom/power": {
-		"format": " 󰐥 ", 
+		"format": " 󰐥 ",
 		"tooltip": false,
 		"on-click": "~/.config/rofi/power-menu.sh"
 	},

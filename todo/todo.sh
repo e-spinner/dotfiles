@@ -8,6 +8,7 @@ usage() {
     echo "  todo done <task-id>"
     echo "  todo next [i]"
     echo "  reorder"
+    echo "  edit"
     exit 1
 }
 
@@ -109,6 +110,7 @@ case "$cmd" in
     reorder)
         tmpfile=$(mktemp)
         awk -F'|' '$5 == "TODO"' "$DB" | sort -t'|' -k3 >> "$tmpfile"
+        echo "" >> "$tmpfile"
         awk -F'|' '$5 == "DONE"' "$DB" | sort -t'|' -k3 >> "$tmpfile"
         mv "$tmpfile" "$DB"
         ;;
@@ -116,6 +118,10 @@ case "$cmd" in
     ""|help|--help|-h)
         usage
         ;;
+
+    edit)
+    	micro "$DB"
+    	;;
 
     *)
         echo "Unknown command: $cmd"
